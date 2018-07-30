@@ -9,6 +9,9 @@ export class MessageService {
   }
 
   clear() {
-    this.messages = [];
+    if(confirm('Are you sure to delete messages ?')){
+      this.messages = [];
+    }
+
   }
 }
