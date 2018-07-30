@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  // { path: 'cl-heroes', component: HeroesComponent },
+  { path: 'cl-heroes', component: HeroesComponent },
 ];
 
 @NgModule({
