@@ -12,6 +12,11 @@ export class MessageService {
     if(confirm('Are you sure to delete messages ?')){
       this.messages = [];
     }
+  }
 
+  clearTop5Message(){
+    if(confirm('Are you sure to delete Top 5 messages ?')){
+      this.messages.splice(0,4);
+    }
   }
 }
