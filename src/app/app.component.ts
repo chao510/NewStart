@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MessageService } from './message.service';
+import { HeroServiceInterface } from './hero-service.interface';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +10,15 @@ import { MessageService } from './message.service';
 })
 export class AppComponent {
   title = 'Tour of Heroes';
+  counter$ : Observable<number> = this.heroService.counter$;
 
-  constructor(public messageService: MessageService) {}
+  constructor(
+    public messageService: MessageService,
+    public heroService: HeroServiceInterface
+
+  ) {}
 
   ngOnInit() {
+
   }
 }
