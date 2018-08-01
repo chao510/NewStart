@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
@@ -10,6 +10,7 @@ import { HeroService } from '../hero.service';
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
+  counter;
 
   @Output()
   heroChanged = new EventEmitter<any>();
@@ -24,6 +25,7 @@ export class HeroesComponent implements OnInit {
     this.heroService.getHeroes()
       .subscribe(heroes => {
         this.heroes = heroes;
+        this.counter = this.heroes.length;
       });
 
   }
@@ -34,12 +36,15 @@ export class HeroesComponent implements OnInit {
     this.heroService.addHero({ name } as Hero)
       .subscribe(hero => {
         this.heroes.push(hero);
+        this.heroChanged.emit(hero);
+        this.counter = this.heroes.length;
       });
   }
 
   delete(hero: Hero): void {
     this.heroes = this.heroes.filter(h => h !== hero);
     this.heroService.deleteHero(hero).subscribe();
+    this.counter = this.heroes.length;
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MessageService } from './message.service';
 import { HeroServiceInterface } from './hero-service.interface';
 import { Observable } from 'rxjs/Observable';
