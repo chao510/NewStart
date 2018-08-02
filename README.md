@@ -2,7 +2,8 @@
 您好：
 下方是每項測驗的連結，方便您參考
 <ul>
-<li><a href="d76658efd4a2f1a3a3b8f21a76a506935160429e">Fix module lazyLoading and Layout</a></li>
+<li><a href="https://github.com/chao510/NewStart/commit/d76658efd4a2f1a3a3b8f21a76a506935160429e">Fix slice heroes (1,5)->(0,4)</a></li>
+<li><a href="https://github.com/chao510/NewStart/commit/6853ab3cb13c4a3decfc68cfaebca60828cedf52">Fix module lazyLoading and Layout</a></li>
 <li><a href="https://github.com/chao510/NewStart/commit/68e7887b49d795315bd109e78aba996ad77e37ca">RWD-3 </a></li>
 <li><a href="https://github.com/chao510/NewStart/commit/6a2a43dac92b9bc3f5670195f76d079e20a4da74">RWD-2 <a/></li>
 <li><a href="https://github.com/chao510/NewStart/commit/e89771b17f24327b1563631bbb41e79f90b641bb">RWD-1 </a></li>
